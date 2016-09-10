@@ -1,0 +1,5 @@
+{
+  "name": "siadiui/remove-emojis-meta",
+  "description": "Wordpress plugin that removes emojis code and other meta tags from your <head>",
+  "type": "wordpress-plugin"
+}
