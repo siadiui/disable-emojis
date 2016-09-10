@@ -1,11 +1,10 @@
 <?php
 /*
-Plugin Name: Disable Emojis
-Plugin URI: https://geek.hellyer.kiwi/plugins/disable-emojis/
-Description: Disable Emojis
-Version: 1.5
+Plugin Name: Remove emojis and meta
+Plugin URI: https://github.com/siadiui/remove-emojis-meta
+Description: Remove emojis and meta from <head>
+Version: 1.0
 Author: Ryan Hellyer
-Author URI: https://geek.hellyer.kiwi/
 License: GPL2
 
 ------------------------------------------------------------------------
@@ -29,10 +28,10 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
 
 /**
- * Disable the emoji's
+ * Disable the emoji's and other meta tags
  */
 function disable_emojis() {
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action('wp_head', 'print_emoji_detection_script', 7 );
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wlwmanifest_link');
 	remove_action('wp_head', 'wp_generator');
@@ -60,4 +59,3 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
-
